@@ -1,0 +1,278 @@
+//hero
+
+import React from 'react'
+import { animate, motion } from 'framer-motion'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import {Prism as syntaxHighlighter} from 'react-syntax-highlighter';
+import mmm from '../assets/mmm.png'
+const Hero = () => {
+
+    const fadeInUp={
+      initial:{opacity:0,y:20},
+      animate:{opacity:1,y:0},
+      transition:{duration:0.6}
+    }
+    const straggerContainer={
+      animate:{
+        transition:{
+          staggerChildren:0.1,
+        },
+      },
+    }
+  return (
+   <>
+     <motion.section id='hero' className='bg-red-400'
+     initial={{opacity:0}}
+     animate={{opacity:1}}
+     transition={{duration:0.8,delay:0.2}}
+     >
+      <div className="hero-container">
+         <motion.div className='hero-content' variants={straggerContainer} initial="initial" animate="animate">
+           <motion.div className='hero-badge'>
+              <span className=''>👋 hello, I'm</span>
+           </motion.div>
+           <motion.h1 className='name' variants={fadeInUp}>
+            Mohd Murtuza
+           </motion.h1>
+           <motion.h2 className='hero-subtitle' variants={fadeInUp}>
+            Creative web developer & designer
+           </motion.h2>
+           <motion.p className='hero-description' variants={fadeInUp} >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde saepe excepturi, officia aliquam sit quidem ad voluptatum iste praesentium possimus delectus impedit facere dicta inventore repudiandae reprehenderit modi expedita veniam.
+           </motion.p>
+
+           <motion.div variants={straggerContainer} className='connect-btn'> 
+            <motion.a href='#project' className='view-work btn'>my work</motion.a>
+            <motion.a href='#contact' className='contact-me btn' whileHover={{
+              scale:1.05
+            }}
+            whileTap={{
+              scale:0.95
+            }}
+            >contact me</motion.a>
+           
+
+           </motion.div>
+
+           <motion.div className='social-link' variants={straggerContainer}>
+            <motion.a className='github'>
+              <FaGithub/>
+            </motion.a>
+            <motion.a href='www.linkedin.com/in/mohd-murtuza-05884129b' className='linkdin'>
+             <FaLinkedin/>
+            </motion.a>
+           
+           </motion.div>
+         </motion.div>
+         <motion.div className='hero-image'initial={{opacity:0,x:50}} animate={{opacity:1,x:0}}transition={{duration:0.8,delay:0.2}}>
+          <div className='image'>
+            <syntaxHighlighter>
+              <img src={mmm} alt="" />
+            </syntaxHighlighter>
+          </div>
+                
+         </motion.div>
+      </div>
+    {/* <motion.div className='hide'>
+      <motion.ul>
+        <motion.li variants={fadeInUp} className='cross'>
+           X
+        </motion.li>
+        <motion.li variants={fadeInUp}>
+          <a href="#home">Home</a>
+        </motion.li>
+         <motion.li variants={fadeInUp}>
+          <a href="#skill">Skills</a>
+        </motion.li>
+         <motion.li variants={fadeInUp}>
+          <a href="#project">Project</a>
+        </motion.li>
+         <motion.li variants={fadeInUp}>
+          <a href="#contact">Contact</a>
+        </motion.li>
+
+      </motion.ul>
+    </motion.div> */}
+     </motion.section>
+   </>
+  )
+}
+
+export default Hero
+
+//skill
+
+
+import React from 'react'
+import {motion} from 'framer-motion'
+const Skills = () => {
+    
+        const fadeInUp={
+          initial:{z:(0,0,0)},
+          animate:{z:(0,-20,0)},
+          transition:{duration:0.6,repeat:Infinity}
+        }
+        const straggerContainer={
+          animate:{
+            transition:{
+              staggerChildren:0.1,
+            },
+          },
+        }
+  return (
+   <motion.section className='skill' id='skill' initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.5,delay:0.7,ease:"easeInOut"}}  >
+      <motion.div className='' variants={straggerContainer}>
+        <motion.h1 className='h1'>
+            Skills
+        </motion.h1>
+        <motion.div variants={straggerContainer} className='skill-container'>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>css</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0}} animate={{opacity:1}} whileHover={{y:-20}} transition={{duration:0.1}}>CSS</motion.h2>
+        </motion.div>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>tailwind css</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} whileHover={{y:-20}} transition={{duration:0.1}} >JAVASCRIPT</motion.h2>
+        </motion.div>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>javascript</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} whileHover={{y:-20}} transition={{duration:0.1}} >REACT JS</motion.h2>
+        </motion.div>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>react js</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} whileHover={{y:-15}} transition={{duration:0.1}} >NODE JS</motion.h2>
+        </motion.div>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>express js</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} whileHover={{y:-15}} transition={{duration:0.1}} >EXPRESS JS</motion.h2>
+        </motion.div>
+
+          <motion.div variants={straggerContainer} className='skill-p'>
+            {/* <motion.span className='span' variants={fadeInUp}>node js</motion.span><motion.div variants={fadeInUp} className='div'
+            ></motion.div> */}
+             <motion.h2 className='h2' initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} whileHover={{y:-15}} transition={{duration:0.1}}>MONGO DB</motion.h2>
+        </motion.div>
+
+        </motion.div>
+      
+
+      </motion.div>
+   </motion.section>
+  )
+}
+
+export default Skills
+
+//project
+
+import React from 'react'
+import {motion} from 'framer-motion'
+import portfolio from '../assets/portfolio.png';
+import chatapp from '../assets/chatapp.webp';
+import ecommerce from '../assets/ecommerce.jpg'
+const Project = () => {
+
+     const fadeInUp={
+          initial:{z:(0,0,0)},
+          animate:{z:(0,-20,0)},
+          transition:{duration:0.6,repeat:Infinity}
+        }
+        const straggerContainer={
+          animate:{
+            transition:{
+              staggerChildren:0.1,
+            },
+          },
+        }
+  return (
+   <>
+     <motion.section className='project' id='project' initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1,delay:0.4}}>
+                     <motion.h1 className='h1-project' initial={{opacity:0,y:-30}} animate={{opacity:1,y:0}} transition={{duration:0.6}}>
+                       project
+                     </motion.h1>
+                     <motion.div className='project-container' variants={straggerContainer}>
+                          <motion.div className='project-card' whileHover={{y:-20}} transition={{duration:0.2}}>
+                             <img src={portfolio} alt="" />
+                             <div>
+                              <h3>portfolio</h3>
+                                <a href="">check</a>
+                             </div>
+                         
+                          </motion.div>
+                           <motion.div className='project-card' whileHover={{y:-20}} transition={{duration:0.2}}>
+                             <img src={chatapp} alt="" />
+                             <div>
+                              <h3>chat app</h3>
+                               <a href="">check</a>
+                             </div>
+                            
+                          </motion.div>
+
+                           <motion.div className='project-card' whileHover={{y:-20}} transition={{duration:0.2}}>
+                             <img src={ecommerce} alt="" />
+                             <div>
+                              <h3>E-Commerce </h3>
+                             <a href="">check</a>
+                             </div>
+                            
+                          </motion.div>
+                     </motion.div>
+     </motion.section>
+   </>
+  )
+}
+
+export default Project
+
+//contact
+
+
+import React from 'react'
+import {motion} from 'framer-motion'
+import { FaAddressCard } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+const Contact = () => {
+
+    const straggerContainer={
+          animate:{
+            transition:{
+              staggerChildren:0.1,
+            },
+          },
+        }
+  return (
+   <>
+   <motion.section className='contact' initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.6,delay:0.3}}>
+      <motion.h1 className='h1-contact'>
+            get in touch
+          </motion.h1>
+         <motion.div className='contact-container' variants={straggerContainer}>
+        
+         
+            <motion.div>
+              <motion.form className='form' variants={straggerContainer}>
+                         <input className='name' type="text" placeholder='enter name...' name='name' />
+                         <input className='email' type="email" name="email" id="" placeholder='enter email...'  />
+                         <textarea rows={3} className='textarea' name="message" id="" placeholder='message me...'></textarea>
+                        <input className='submit' type="submit" value="sene me" />
+                    </motion.form>
+          </motion.div>
+                  
+         </motion.div>
+   </motion.section>
+   </>
+  )
+}
+
+export default Contact
