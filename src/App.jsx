@@ -4,9 +4,10 @@ import Hero from './component/Hero.jsx';
 import './App.css'
 import { useEffect, useState } from 'react';
 
-import Skills from './component/Skills.jsx';
+import About from './component/About.jsx';
 import Project from './component/Project.jsx';
 import Contact from './component/Contact.jsx';
+import { ToastContainer } from 'react-toastify';
 function App() {
 
   const [isloaded,setIsLoaded]=useState(false);
@@ -22,10 +23,10 @@ function App() {
 
     
      <Hero/>
-   <Skills/>
+   <About/>
    <Project/>
  <Contact/>
-  
+  <ToastContainer/>
     
     </div>
  

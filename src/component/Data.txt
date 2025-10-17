@@ -237,6 +237,7 @@ export default Project
 //contact
 
 
+
 import React from 'react'
 import {motion} from 'framer-motion'
 import { FaAddressCard } from "react-icons/fa6";
