@@ -13,11 +13,11 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    let YOUR_PUBLIC_KEY=import.meta.env. VITE_YOUR_PUBLIC_KEY
-     let service_id=import.meta.env.VITE_service_id
+    let YOUR_PUBLIC_KEY=import.meta.env.VITE_YOUR_PUBLIC_KEY
+     let SERVICE_ID=import.meta.env.VITE_SERVICE_ID
     let YOUR_TEMPLATE_ID=import.meta.env. VITE_YOUR_TEMPLATE_ID
     emailjs
-      .sendForm(service_id, YOUR_TEMPLATE_ID, form.current, {
+      .sendForm(SERVICE_ID, YOUR_TEMPLATE_ID, form.current, {
         publicKey: YOUR_PUBLIC_KEY,
       })
       .then(
