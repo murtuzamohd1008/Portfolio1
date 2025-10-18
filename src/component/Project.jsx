@@ -92,28 +92,28 @@ const Project = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className='w-[90%] md:w-[300px] h-[300px] '>
-              <ProjectCard image={chatapp} text={'Realtime Chat App'} live={'live'} github={'github'}/>
+              <ProjectCard image={chatapp} text={'Realtime Chat App'} giturl={'https://github.com/murtuzamohd1008/Realtime-chat-application'} live={'local'} github={'github'}/>
             </motion.div>
               <motion.div
               initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
                className='w-[90%] md:w-[300px] h-[300px] '>
-              <ProjectCard image={ecommerce} text={'E-Commerce'} live={'live'} github={'github'}/>
+              <ProjectCard image={ecommerce} text={'E-Commerce'} live={'live'} github={'github'} liveurl={'https://ecommerce-gssi.vercel.app/'} giturl={'https://github.com/murtuzamohd1008/ecommerce'}/>
             </motion.div>
               <motion.div
                initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
                className='w-[90%] md:w-[300px] h-[300px] '>
-              <ProjectCard image={portfolio} text={'Portfolio'} live={'live'} github={'github'}/>
+              <ProjectCard image={portfolio} text={'Portfolio'} live={'live'} github={'github'} giturl={'https://github.com/murtuzamohd1008/Portfolio1'} liveurl={'#'}/>
             </motion.div>
               <motion.div
               initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
                className='w-[90%] md:w-[300px] h-[300px] '>
-              <ProjectCard image={chatbot} text={'Smart Chatbot'} live={'live'} github={'github'}/>
+              <ProjectCard image={chatbot} text={'Smart Chatbot'} live={'live'} github={'github'} giturl={'https://github.com/murtuzamohd1008/Ai-Chatbot'} liveurl={'https://ai-chatbot-teal-six.vercel.app/'}/>
             </motion.div>
           </motion.div>
         </motion.div>
