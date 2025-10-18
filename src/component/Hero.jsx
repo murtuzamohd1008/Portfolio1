@@ -78,7 +78,7 @@ const Hero = () => {
                  initial={{opacity:0}}
           whileInView={{opacity:1}}
           transition={{duration:2.5,ease:"easeOut"}}
-              href='/resume.pdf' target='_blank' rel='noopener noreferrer' className='bg-blue-400  border-gray-200 border-2 px-[28px] py-[6px] rounded-full text-black transition-all duration-200 hover:bg-[#2b2424] hover:text-blue-400' 
+              href='/murtuza.pdf' target='_blank' rel='noopener noreferrer' className='bg-blue-400  border-gray-200 border-2 px-[28px] py-[6px] rounded-full text-black transition-all duration-200 hover:bg-[#2b2424] hover:text-blue-400' 
                 whileTap={{
                   scale: 0.95
                 }}
